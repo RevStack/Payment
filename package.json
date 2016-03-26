@@ -1,0 +1,19 @@
+{
+  "name": "RevStack.Payment",
+  "version": "0.1",
+  "description": "C# Payment class library",
+  "main": "RevStack.Payment.sln",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RevStack/Payment.git"
+  },
+  "author": "D. Sheets",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RevStack/Payment/issues"
+  },
+  "homepage": "https://github.com/RevStack/Payment"
+}
