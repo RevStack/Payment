@@ -1,0 +1,6 @@
+\\Mac\Home\Documents\Development\mono\RevStack\updated\Payment\RevStack.Payment\bin\Debug\RevStack.Payment.dll.config
+\\Mac\Home\Documents\Development\mono\RevStack\updated\Payment\RevStack.Payment\bin\Debug\RevStack.Payment.dll
+\\Mac\Home\Documents\Development\mono\RevStack\updated\Payment\RevStack.Payment\bin\Debug\RevStack.Payment.pdb
+\\Mac\Home\Documents\Development\mono\RevStack\updated\Payment\RevStack.Payment\obj\Debug\RevStack.Payment.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Development\mono\RevStack\updated\Payment\RevStack.Payment\obj\Debug\RevStack.Payment.dll
+\\Mac\Home\Documents\Development\mono\RevStack\updated\Payment\RevStack.Payment\obj\Debug\RevStack.Payment.pdb
