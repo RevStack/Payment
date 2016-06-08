@@ -7,7 +7,8 @@ namespace RevStack.Payment.Providers.AuthorizeDotNet
     {
         #region private members & constructors
 
-        private const string ChargeTestUrl = "https://test.authorize.net/gateway/transact.dll";
+        //private const string ChargeTestUrl = "https://test.authorize.net/gateway/transact.dll";
+        private const string ChargeTestUrl = "https://secure.authorize.net/gateway/transact.dll";
         private const string ChargeLiveUrl = "https://secure.authorize.net/gateway/transact.dll";
         private const string SoapTestUrl = "https://apitest.authorize.net/soap/v1/Service.asmx";
         private const string SoapLiveUrl = "https://api.authorize.net/soap/v1/Service.asmx";
@@ -36,6 +37,8 @@ namespace RevStack.Payment.Providers.AuthorizeDotNet
             Post = new Dictionary<string, string>();
             Queue(AuthorizeDotNetApi.ApiLogin, username);
             Queue(AuthorizeDotNetApi.TransactionKey, password);
+            if (isTestMode)
+                Queue(AuthorizeDotNetApi.IsTestRequest, isTestMode.ToString().ToUpper());
             // default settings
             Queue(AuthorizeDotNetApi.DelimitData, "TRUE");
             Queue(AuthorizeDotNetApi.DelimitCharacter, "|");
