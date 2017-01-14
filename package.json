@@ -1,6 +1,6 @@
 {
   "name": "RevStack.Payment",
-  "version": "0.1",
+  "version": "1.0.0",
   "description": "C# Payment class library",
   "main": "RevStack.Payment.sln",
   "scripts": {
