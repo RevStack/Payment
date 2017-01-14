@@ -1,7 +1,0 @@
-\\Mac\Home\Documents\Development\mono\RevStack\updated\Payment\RevStack.Payment\bin\Release\RevStack.Payment.dll.config
-\\Mac\Home\Documents\Development\mono\RevStack\updated\Payment\RevStack.Payment\bin\Release\RevStack.Payment.dll
-\\Mac\Home\Documents\Development\mono\RevStack\updated\Payment\RevStack.Payment\bin\Release\RevStack.Payment.XmlSerializers.dll
-\\Mac\Home\Documents\Development\mono\RevStack\updated\Payment\RevStack.Payment\bin\Release\RevStack.Payment.pdb
-\\Mac\Home\Documents\Development\mono\RevStack\updated\Payment\RevStack.Payment\obj\Release\RevStack.Payment.dll
-\\Mac\Home\Documents\Development\mono\RevStack\updated\Payment\RevStack.Payment\obj\Release\RevStack.Payment.pdb
-\\Mac\Home\Documents\Development\mono\RevStack\updated\Payment\RevStack.Payment\obj\Release\RevStack.Payment.XmlSerializers.dll
