@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="RevStack.Pattern, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RevStack.Pattern.1.0.2\lib\net46\RevStack.Pattern.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.EnterpriseServices" />
@@ -45,160 +49,45 @@
   <ItemGroup>
     <Compile Include="BillingInterval.cs" />
     <Compile Include="BillingType.cs" />
-    <Compile Include="Currency.cs" />
+    <Compile Include="Context\IPaymentGatewayContext.cs" />
+    <Compile Include="Context\PaymentGatewayContext.cs" />
     <Compile Include="Extensions.cs" />
-    <Compile Include="Gateway.cs" />
-    <Compile Include="GatewayAuth.cs" />
-    <Compile Include="GatewayInfo.cs" />
-    <Compile Include="GatewayRequest.cs" />
-    <Compile Include="GatewayType.cs" />
-    <Compile Include="IFeatures.cs" />
-    <Compile Include="IGatewayApiRequest.cs" />
-    <Compile Include="IGateway.cs" />
-    <Compile Include="IGatewayApi.cs" />
-    <Compile Include="IGatewayResponse.cs" />
-    <Compile Include="GatewayManager.cs" />
+    <Compile Include="Model\IPayment.cs" />
+    <Compile Include="Model\IAuthorize.cs" />
+    <Compile Include="Model\ICancelSubscription.cs" />
+    <Compile Include="Model\ICapture.cs" />
+    <Compile Include="Model\ICharge.cs" />
+    <Compile Include="Model\ICredit.cs" />
+    <Compile Include="Model\ICreditCard.cs" />
+    <Compile Include="Model\ICustomer.cs" />
+    <Compile Include="Model\IInvoice.cs" />
+    <Compile Include="Model\IShipping.cs" />
+    <Compile Include="Model\ISubscribe.cs" />
+    <Compile Include="Model\ISubscription.cs" />
+    <Compile Include="Model\ITransactionDetails.cs" />
+    <Compile Include="Model\ITransactions.cs" />
+    <Compile Include="Model\IUpdateSubscription.cs" />
+    <Compile Include="Model\IVoid.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Providers\AuthorizeDotNet\AuthorizeDotNetApi.cs" />
-    <Compile Include="Providers\AuthorizeDotNet\AuthorizeDotNetApiRequest.cs" />
-    <Compile Include="Providers\AuthorizeDotNet\AuthorizeDotNetFeatures.cs" />
-    <Compile Include="Providers\AuthorizeDotNet\AuthorizeDotNetRequest.cs" />
-    <Compile Include="Providers\AuthorizeDotNet\AuthorizeDotNetResponse.cs" />
-    <Compile Include="RequestAction.cs" />
+    <Compile Include="Repository\IPaymentRepository.cs" />
+    <Compile Include="Repository\ISubscriptionRepository.cs" />
     <Compile Include="ServiceMode.cs" />
-    <Compile Include="TransactionType.cs" />
-    <Compile Include="Web References\net.authorize.api\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.map</DependentUpon>
-    </Compile>
+    <Compile Include="Service\IPaymentService.cs" />
+    <Compile Include="Service\ISubscriptionService.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <WebReferences Include="Web References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WebReferenceUrl Include="https://api.authorize.net/soap/v1/Service.asmx">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\net.authorize.api\</RelPath>
-      <UpdateFromURL>https://api.authorize.net/soap/v1/Service.asmx</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>RevStack_Payment_net_authorize_api_Service</CachedSettingsPropName>
-    </WebReferenceUrl>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Web References\net.authorize.api\ANetApiResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\ARBCancelSubscriptionResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\ARBCreateSubscriptionResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\ARBGetSubscriptionListResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\ARBGetSubscriptionResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\ARBGetSubscriptionStatusResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\ARBUpdateSubscriptionResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\CreateCustomerPaymentProfileResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\CreateCustomerProfileResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\CreateCustomerProfileTransactionResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\CreateCustomerShippingAddressResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\DeleteCustomerPaymentProfileResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\DeleteCustomerProfileResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\DeleteCustomerShippingAddressResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\GetBatchStatisticsResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\GetCustomerPaymentProfileListResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\GetCustomerPaymentProfileResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\GetCustomerProfileIdsResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\GetCustomerProfileResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\GetCustomerShippingAddressResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\GetHostedProfilePageResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\GetSettledBatchListResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\GetTransactionDetailsResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\GetTransactionListResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\GetUnsettledTransactionListResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\net.authorize.api\Service.wsdl" />
-    <None Include="Web References\net.authorize.api\UpdateCustomerPaymentProfileResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\UpdateCustomerProfileResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\UpdateCustomerShippingAddressResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\UpdateSplitTenderGroupResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.authorize.api\ValidateCustomerPaymentProfileResponseType.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Web References\net.authorize.api\Service.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

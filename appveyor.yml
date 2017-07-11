@@ -1,6 +1,6 @@
 configuration: Release
 
-version: 1.0.{build}
+version: 2.0.{build}
 
 build:
     parallel: true

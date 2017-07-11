@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RevStack.Payment", "RevStack.Payment\RevStack.Payment.csproj", "{04EDEF34-5ACD-4A07-8753-79864D0DE8D6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{54AD0D34-1634-40D6-9D5D-1347C0FA8A4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{04EDEF34-5ACD-4A07-8753-79864D0DE8D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04EDEF34-5ACD-4A07-8753-79864D0DE8D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04EDEF34-5ACD-4A07-8753-79864D0DE8D6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{54AD0D34-1634-40D6-9D5D-1347C0FA8A4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{54AD0D34-1634-40D6-9D5D-1347C0FA8A4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{54AD0D34-1634-40D6-9D5D-1347C0FA8A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{54AD0D34-1634-40D6-9D5D-1347C0FA8A4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

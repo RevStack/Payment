@@ -4,13 +4,13 @@ namespace RevStack.Payment
     public enum RequestAction
     {
         Authorize,
-        Settle,
-        Sale,
-        Refund,
+        Capture,
+        Charge,
+        Credit,
         Void,
         GetTransactions,
         GetTransactionDetails,
-        CreateSubscription,
+        Subscribe,
         UpdateSubscription,
         CancelSubscription,
         GetSubscriptionStatus

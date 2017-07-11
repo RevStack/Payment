@@ -22,15 +22,5 @@ namespace RevStack.Payment.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://api.authorize.net/soap/v1/Service.asmx")]
-        public string RevStack_Payment_net_authorize_api_Service {
-            get {
-                return ((string)(this["RevStack_Payment_net_authorize_api_Service"]));
-            }
-        }
     }
 }
