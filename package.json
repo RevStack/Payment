@@ -1,6 +1,6 @@
 {
   "name": "RevStack.Payment",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "RevStack Payment class library interfaces.",
   "main": "RevStack.Payment.sln",
   "scripts": {
